@@ -12,6 +12,7 @@
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous">//bootstrap 4</script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" sizes="any" mask href="https://www.google.com.tw/favicon.ico">
     <title>登入 - Google 帳戶</title>
     <style>
@@ -26,13 +27,18 @@
             align-items: center;
             height: 100vh;
         }
+
+        progress {
+            height: 6px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center animate__animated animate__fadeIn">
             <div class="card col-5 d-none d-md-block">
+                <progress class="nav col-12" max="100" id="oprogress"></progress>
                 <div class="card-body text-center">
                     <svg viewBox="0 0 75 24" width="75" height="24" class="mt-4">
                         <g id="qaEJec">
