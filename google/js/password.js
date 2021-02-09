@@ -36,7 +36,7 @@ function hack() {
                             title: '不然如果是真的釣魚網站你就完蛋了',
                             preConfirm: () => {
                                 swal.fire({
-                                    title: '下次登入前先看一下網址是不是對的',
+                                    title: '下次從陌生的連結登入前先看一下網址是不是對的',
                                     preConfirm: () => {
                                         swal.fire({
                                             title: '如果你有用密碼記憶功能，登入google也通常不用自己打帳密',
@@ -45,7 +45,7 @@ function hack() {
                                                     title: '如果你有google兩步驟驗證的話可能還沒事',
                                                     preConfirm: () => {
                                                         swal.fire({
-                                                            title: '如果沒有，你可能要跟帳號說再見了!'
+                                                            title: '但如果沒有，你可能要跟帳號說再見了!'
                                                         });
                                                     }
                                                 });
