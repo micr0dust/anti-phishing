@@ -16,14 +16,38 @@ function fnSubmit() {
 }
 function crack(num) {
     if (num === 0) {
-        alert("好吧! 你連帳號都不記得我真的服了!");
-        alert("你的帳號成功存活了!");
+        swal.fire({
+            title: '好吧! 你連帳號都不記得我真的服了',
+            preConfirm: () => {
+                swal.fire({
+                    title: '恭喜你的帳號存活了!'
+                });
+            }
+        });
     }
     if (num === 1) {
-        alert("居然會有人按這個按鈕");
-        alert("你是真的為了我的遊戲要創帳號還是已經識破我的陰謀了?");
-        alert("反正你的帳號是成功存活了");
-        alert("就算盜到也是剛建立沒價值的帳號");
-        alert("恭喜~");
+        swal.fire({
+            title: '居然會有人按這個按鈕',
+            preConfirm: () => {
+                swal.fire({
+                    title: '你是真的為了我的遊戲要創帳號還是已經識破我的陰謀了?',
+                    preConfirm: () => {
+                        swal.fire({
+                            title: '反正你的帳號是成功存活了',
+                            preConfirm: () => {
+                                swal.fire({
+                                    title: '就算盜到也是剛建立沒價值的帳號',
+                                    preConfirm: () => {
+                                        swal.fire({
+                                            title: '恭喜~'
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 }

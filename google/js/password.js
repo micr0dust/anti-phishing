@@ -26,24 +26,70 @@ function hack() {
     if (pcPassword.value.length > 2 || mPassword.value.length > 2) {
         pcPassword.value = "";
         mPassword.value = "";
-        alert("欸! 你不覺得網址怪怪的嗎?");
-        alert("還好我沒有要盜你帳號");
-        alert("不然如果是真的釣魚網站你就完蛋了");
-        alert("下次登入前先看一下網址是不是對的");
-        alert("如果你有用密碼記憶功能，登入google也通常不用自己打帳密");
-        alert("如果你有google兩步驟驗證的話可能還沒事");
-        alert("如果沒有，你可能要跟帳號說再見了!");
+        swal.fire({
+            title: '欸! 你不覺得網址怪怪的嗎?',
+            preConfirm: () => {
+                swal.fire({
+                    title: '還好我沒有要盜你帳號',
+                    preConfirm: () => {
+                        swal.fire({
+                            title: '不然如果是真的釣魚網站你就完蛋了',
+                            preConfirm: () => {
+                                swal.fire({
+                                    title: '下次登入前先看一下網址是不是對的',
+                                    preConfirm: () => {
+                                        swal.fire({
+                                            title: '如果你有用密碼記憶功能，登入google也通常不用自己打帳密',
+                                            preConfirm: () => {
+                                                swal.fire({
+                                                    title: '如果你有google兩步驟驗證的話可能還沒事',
+                                                    preConfirm: () => {
+                                                        swal.fire({
+                                                            title: '如果沒有，你可能要跟帳號說再見了!'
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 }
 function crack(num) {
     if (num === 0) {
-        alert("都來到這了怎麼會想切帳號呢?");
-        alert("可惡! 居然沒有被騙到");
-        alert("你的帳號成功存活了!");
+        swal.fire({
+            title: '都來到這了怎麼會想切帳號呢?',
+            preConfirm: () => {
+                swal.fire({
+                    title: '難道還是被發現了嗎?',
+                    preConfirm: () => {
+                        swal.fire({
+                            title: '你的帳號成功存活了!'
+                        });
+                    }
+                });
+            }
+        });
     }
     if (num === 1) {
-        alert("記性差也是有好處的!");
-        alert("是不是平常都靠自動輸入不記密碼?");
-        alert("反正你的帳號是成功存活了");
+        swal.fire({
+            title: '記性差也是有好處的!',
+            preConfirm: () => {
+                swal.fire({
+                    title: '是不是平常都靠自動輸入不記密碼?',
+                    preConfirm: () => {
+                        swal.fire({
+                            title: '反正你的帳號是成功存活了'
+                        });
+                    }
+                });
+            }
+        });
     }
 }
